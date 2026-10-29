@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#264f3d">
+  <meta name="description" content="Przygotuj się do kartkówki z niemieckiego. Przedmioty kuchenne, jedzenie, częstotliwość i einer/einen/eins: fiszki, ćwiczenia, próbny test.">
+  <title>KüchenKlub — niemiecki na kartkówkę</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23264f3d'/%3E%3Ctext x='12' y='46' font-size='43'%3EK%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Przejdź do nauki</a>
+  <header class="topbar"><div class="top-inner">
+    <a href="#" class="brand" aria-label="KüchenKlub — strona główna"><span class="brand-mark">K<span>ü</span></span>Küchen<span>Klub</span><span class="brand-dot">.</span></a>
+    <div class="top-note"><span class="status-dot"></span>Mała powtórka. Duża różnica.</div>
+    <button class="plain-button" id="help-button" aria-label="Pokaż plan nauki">Jak się uczyć? <span aria-hidden="true">↗</span></button>
+  </div></header>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy"><p class="eyebrow">DEUTSCH A2 · JEDZENIE I KUCHNIA</p><h1 id="hero-title">Niemiecki?<br><span>Od kuchni.</span></h1><p class="hero-description">Ogarnij słówka, rozgryź gramatykę i sprawdź się przed kartkówką. Krok po kroku, po swojemu.</p><button class="button primary" id="start-button">Zacznij powtórkę <span aria-hidden="true">↗</span></button><p class="hero-caption">Fiszki + ćwiczenia + próbna kartkówka</p></div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="paper-tag">LEKCJA 3 <span>✦</span></div>
+        <div class="art-word">der Topf<span>garnek</span></div>
+        <svg viewBox="0 0 350 300" class="pot-art"><ellipse cx="174" cy="254" rx="109" ry="15" fill="#b8c8a6" opacity=".45"/><path d="M111 111q-20-27 0-48M173 91q-20-27 0-48M230 110q-20-27 0-48" fill="none" stroke="#5d795e" stroke-width="5" stroke-linecap="round"/><path d="M87 159H64q-22 0-22 21t22 21h23M263 159h23q22 0 22 21t-22 21h-23" fill="none" stroke="#234d3c" stroke-width="13"/><path d="M84 149h181v61q0 38-38 38H122q-38 0-38-38z" fill="#387457"/><path d="M101 168v39q0 22 19 23" fill="none" stroke="#79a281" stroke-width="7" stroke-linecap="round"/><path d="M75 145q99-81 198 0z" fill="#28533f"/><path d="M154 98v-9q0-10 20-10t20 10v9" fill="#e3b66c" stroke="#234d3c" stroke-width="5"/><path d="M75 145h198" stroke="#163d2b" stroke-width="8" stroke-linecap="round"/><path d="M103 126q17-15 43-19" fill="none" stroke="#6b9573" stroke-width="6" stroke-linecap="round"/></svg>
+        <div class="grammar-sticker">Hast du einen?<span>Ja, ich habe einen!</span></div><span class="art-spark spark-one">✳</span><span class="art-spark spark-two">✦</span>
+      </div>
+    </section>
+    <section class="study-shell" id="study" aria-label="Twoja strefa nauki">
+      <div class="study-top"><div><p class="eyebrow">TWOJA STREFA NAUKI</p><h2>Trochę praktyki, dużo pewności.</h2></div><div class="progress-summary"><span class="progress-ring" id="progress-ring">0%</span><div><strong id="learned-count">0 / 36</strong><span>opanowanych fiszek</span></div></div></div>
+      <nav class="tabs" aria-label="Tryb nauki">
+        <button data-view="cards" class="tab active" aria-current="page"><span aria-hidden="true">▱</span> Fiszki</button>
+        <button data-view="words" class="tab"><span aria-hidden="true">☷</span> Słowniczek</button>
+        <button data-view="grammar" class="tab"><span aria-hidden="true">Aa</span> Gramatyka</button>
+        <button data-view="test" class="tab"><span aria-hidden="true">✓</span> Kartkówka</button>
+      </nav>
+      <section id="view-cards" class="view" aria-label="Fiszki">
+        <div class="view-heading"><div><h3>Najpierw słówka.</h3><p>Spróbuj odpowiedzieć, potem odwróć fiszkę.</p></div><button id="direction-button" class="chip">DE → PL <span aria-hidden="true">⇄</span></button></div>
+        <div class="card-layout"><div class="flash-zone"><div class="filter-row"><label class="sr-only" for="card-topic">Temat fiszek</label><select id="card-topic"><option value="all">Wszystkie tematy</option><option value="kitchen">W kuchni</option><option value="frequency">Jak często?</option><option value="food">Jedzenie i posiłki</option></select><label class="check-label"><input type="checkbox" id="unknown-only"> Tylko do powtórki</label></div>
+          <button class="flashcard" id="flashcard" aria-label="Odwróć fiszkę"><span class="card-category" id="card-category">W KUCHNI</span><span class="card-emoji" id="card-emoji" aria-hidden="true">🍲</span><span class="card-word" id="card-word" lang="de">der Topf</span><span class="card-detail" id="card-detail">Liczba mnoga: die Töpfe</span><span class="flip-hint" id="flip-hint">↻ Kliknij, aby zobaczyć znaczenie</span></button>
+          <div class="card-navigation"><button class="round-button" id="previous-card" aria-label="Poprzednia fiszka">←</button><span id="card-position" aria-live="polite">1 / 36</span><button class="round-button" id="next-card" aria-label="Następna fiszka">→</button></div><div class="card-actions"><button class="button secondary" id="repeat-card">Jeszcze powtórzę ↻</button><button class="button primary" id="know-card">Już umiem ✓</button></div><div class="under-card"><button class="plain-button" id="speak-button">♫ Posłuchaj wymowy</button><button class="plain-button" id="shuffle-button">⇄ Potasuj</button></div><p class="live-note" id="card-message" role="status"></p>
+        </div><aside class="study-aside"><span class="aside-icon" aria-hidden="true">✧</span><p class="eyebrow">MAŁY TRIK, WIELKI EFEKT</p><h3>Rodzajnik to<br>część słówka.</h3><p>Ucz się <strong>der Topf</strong>, a nie samego <em>Topf</em>. To on podpowiada, jakiej formy użyć w zdaniu.</p><div class="article-key"><span class="der">der</span><span class="die">die</span><span class="das">das</span></div><div class="aside-example"><span>Ich brauche einen Topf.</span><strong>Hast du einen?</strong></div><button class="text-link" id="grammar-link">Rozgryź tę zasadę <span aria-hidden="true">→</span></button></aside></div>
+      </section>
+      <section id="view-words" class="view" aria-label="Słowniczek" hidden><div class="view-heading"><div><h3>Wszystko w jednym miejscu.</h3><p>Rodzajnik, znaczenie, liczba mnoga i przykład.</p></div></div><label for="word-search" class="sr-only">Szukaj po polsku lub niemiecku</label><input type="search" id="word-search" class="search" placeholder="Szukaj: garnek, der, immer…"><div id="word-list"></div><p id="word-count" class="muted" aria-live="polite"></p></section>
+      <section id="view-grammar" class="view" aria-label="Gramatyka" hidden><div class="view-heading"><div><h3>Końcówki mają sens.</h3><p>Dwie zasady, które przydadzą Ci się na kartkówce.</p></div></div><div class="grammar-grid"><article class="lesson"><span class="lesson-number">01</span><h4>Ich esse nie Fleisch.</h4><p>„Nigdy nie jem mięsa”. Pytamy: <strong>Wie oft…?</strong> — Jak często…?</p><div class="frequency-scale"><span>immer</span><span>meistens</span><span>oft</span><span>manchmal</span><span>selten</span><span>nie</span></div><p><strong>Ich trinke oft Wasser.</strong><br>Często piję wodę.</p><p><strong>Ich koche zweimal pro Woche.</strong><br>Gotuję dwa razy w tygodniu.</p><p class="note">ich esse · du isst · er/sie isst<br>raz = einmal · dwa razy = zweimal · trzy razy = dreimal</p></article><article class="lesson"><span class="lesson-number">02</span><h4>Hast du einen?</h4><p>Zastępujemy nazwę rzeczy, żeby jej nie powtarzać. <strong>Ich brauche einen Topf. Hast du einen?</strong></p><div class="table-scroll"><table><caption class="sr-only">Zaimki w mianowniku i bierniku</caption><thead><tr><th>Rodzaj</th><th>Hier ist/sind…<br><small>mianownik</small></th><th>Ich habe/brauche…<br><small>biernik</small></th></tr></thead><tbody><tr><th><span class="der">der</span></th><td>einer / keiner</td><td>einen / keinen</td></tr><tr><th><span class="die">die</span></th><td>eine / keine</td><td>eine / keine</td></tr><tr><th><span class="das">das</span></th><td>eins / keins</td><td>eins / keins</td></tr><tr><th>mnoga</th><td>welche / keine</td><td>welche / keine</td></tr></tbody></table></div><p class="note">Przed rzeczownikiem: <strong>ein Messer</strong>.<br>Zamiast rzeczownika: <strong>eins</strong>.<br>Formy z k- oznaczają brak: żadnego, żadnej, żadnych.</p></article></div><details class="extra-lesson"><summary>Jeszcze jeden krok: meiner / meine / meins</summary><p>Gdy mówisz „mój / moja / moje”, możesz użyć podobnych form: <strong>Ist das dein Teller? — Ja, das ist meiner.</strong> (der Teller). <strong>Ist das deine Tasse? — Ja, das ist meine.</strong> <strong>Ist das dein Glas? — Ja, das ist meins.</strong> W bierniku rodzaju męskiego: <strong>Du hast deinen Teller, ich habe meinen.</strong></p></details><div class="practice-panel"><div><p class="eyebrow">TERAZ TY</p><h3>Małe ćwiczenie na końcówki.</h3><p>Wybierz odpowiedź. Od razu zobaczysz wyjaśnienie.</p></div><div id="practice-question"></div></div></section>
+      <section id="view-test" class="view" aria-label="Próbna kartkówka" hidden><div id="test-content"></div></section>
+    </section>
+    <section class="bottom-note"><span aria-hidden="true">✦</span><p><strong>Nie musisz umieć wszystkiego od razu.</strong><br>Wróć do trudnych fiszek. Twój postęp zapisuje się w tej przeglądarce.</p></section>
+    <footer><span class="footer-brand">KüchenKlub.</span><p>Autorska pomoc do tematów „Ich esse nie Fleisch” i „Du möchtest doch auch einen, oder?”.<br>Zakres tematyczny: <a href="https://www.hueber.de/shared/elka/Internet_Muster/Red1/9783193610843_Muster_1.pdf" target="_blank" rel="noopener noreferrer">Hueber · lekcja 3, s. 36–37 ↗</a>. Ćwiczenia opracowane niezależnie.</p><button class="plain-button" id="reset-button">Wyzeruj postęp</button></footer>
+  </main>
+  <dialog id="help-dialog"><button class="dialog-close round-button" id="close-help" aria-label="Zamknij plan nauki">×</button><p class="eyebrow">TWÓJ PLAN NA 10 MINUT</p><h2>Spokojnie, po kolei.</h2><ol class="study-plan"><li><strong>4 minuty: fiszki.</strong><span>Mów słówka z rodzajnikiem. Zaznacz te, które już umiesz.</span></li><li><strong>3 minuty: gramatyka.</strong><span>Porównaj „Hier ist einer” z „Ich brauche einen”. Zrób ćwiczenia.</span></li><li><strong>3 minuty: kartkówka.</strong><span>Sprawdź się bez podpowiedzi. Wróć do wyjaśnień błędów.</span></li></ol><p class="muted">Wymowa korzysta z głosu niemieckiego dostępnego na Twoim urządzeniu. Postęp zostaje tylko w tej przeglądarce.</p><button class="button primary" id="help-start">Zaczynam →</button></dialog>
+  <noscript><p class="noscript">Włącz JavaScript, aby korzystać z fiszek i quizów.</p></noscript>
+</body>
+</html>
+
